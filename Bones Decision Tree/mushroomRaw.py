@@ -25,7 +25,6 @@ df_encoded = pd.get_dummies(df.drop(columns=['class']))
 # Split the data
 X_train, X_test, y_train, y_test = train_test_split(df_encoded, df['class'], test_size=0.2, random_state=42)
 
-# Create and fit the Decision Tree model
 dt_model = DecisionTreeClassifier()
 dt_model.fit(X_train, y_train)
 
