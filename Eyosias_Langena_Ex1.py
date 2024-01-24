@@ -2,7 +2,7 @@ import gymnasium as gym
 import matplotlib.pyplot as plt
 from IPython import display
 
-
+# Random Agent, the agent will take random actions
 class RandomAgent:
     def __init__(self, env):
         self.env = env
