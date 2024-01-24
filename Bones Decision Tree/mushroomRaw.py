@@ -19,13 +19,17 @@ data = {
 
 df = pd.DataFrame(data)
 
+# Encode categorical features
 df_encoded = pd.get_dummies(df.drop(columns=['class']))
 
+# Split the data
 X_train, X_test, y_train, y_test = train_test_split(df_encoded, df['class'], test_size=0.2, random_state=42)
 
+# Create and fit the Decision Tree model
 dt_model = DecisionTreeClassifier()
 dt_model.fit(X_train, y_train)
 
+# Visualize the Decision Tree
 plt.figure(figsize=(12, 8))
 plot_tree(dt_model, feature_names=df_encoded.columns, class_names=df['class'].unique(), filled=True, rounded=True)
 plt.show()
