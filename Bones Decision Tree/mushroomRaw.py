@@ -19,7 +19,6 @@ data = {
 
 df = pd.DataFrame(data)
 
-# Encode categorical features
 df_encoded = pd.get_dummies(df.drop(columns=['class']))
 
 X_train, X_test, y_train, y_test = train_test_split(df_encoded, df['class'], test_size=0.2, random_state=42)
