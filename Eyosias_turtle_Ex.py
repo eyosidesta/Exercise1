@@ -1,6 +1,5 @@
 import gym
 import turtle
-import numpy as np
 
 class RandomAgent:
     def __init__(self, env):
