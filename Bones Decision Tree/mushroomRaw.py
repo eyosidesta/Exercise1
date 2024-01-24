@@ -29,7 +29,6 @@ X_train, X_test, y_train, y_test = train_test_split(df_encoded, df['class'], tes
 dt_model = DecisionTreeClassifier()
 dt_model.fit(X_train, y_train)
 
-# Visualize the Decision Tree
 plt.figure(figsize=(12, 8))
 plot_tree(dt_model, feature_names=df_encoded.columns, class_names=df['class'].unique(), filled=True, rounded=True)
 plt.show()
