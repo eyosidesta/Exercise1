@@ -1,12 +1,8 @@
-# Assuming you have a DataFrame 'df' with your data
-# and 'class' is the target variable (safe or poisonous)
-
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier, plot_tree
 import matplotlib.pyplot as plt
 import pandas as pd
 
-# Sample data - replace this with your actual data
 data = {
     'cap': ['convex', 'flat', 'convex', 'convex', 'flat'],
     'scale': ['smooth', 'scales', 'smooth', 'scales', 'scales'],
